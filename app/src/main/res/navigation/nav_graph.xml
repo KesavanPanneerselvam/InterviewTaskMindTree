@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bookingListFragment">
+
+    <fragment
+        android:id="@+id/bookingListFragment"
+        android:name="com.kesavan.android.interviewtaskkotlin.view.BookingListFragment"
+        android:label="BookingList"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_bookingListFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingDetailsFragment"
+        android:name="com.kesavan.android.interviewtaskkotlin.view.BookingDetailsFragment"
+        android:label="BookingDetails"
+        tools:layout="@layout/fragment_booking_details">
+
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_bookingListFragment"
+            app:destination="@id/bookingListFragment" />
+    </fragment>
+
+</navigation>
